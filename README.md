@@ -62,16 +62,6 @@ The Azure Data Lake (vehicleitadatalake) serves as the core data storage layer, 
 
 The Azure Databricks workspace (vehicledatabrick) handles all data transformations using Delta Lake for reliability and ACID compliance.
 
-### Notebook Structure
-vehicle_sales_project/
-├── Silver_Notebook.py - Cleans and standardizes Bronze data
-├── Gold_DimBranch.py - Builds Branch dimension
-├── Gold_DimDealer.py - Builds Dealer dimension
-├── Gold_DimModel.py - Builds Vehicle Model dimension
-├── Gold_DimDate.py - Builds Date dimension
-├── Gold_FactSales.py - Builds Fact_Sales table
-
-
 ### Transformation Flow
 
 Bronze → Silver:
@@ -83,8 +73,6 @@ Silver → Gold:
 - Build Fact_Sales table with all sales transactions  
 - Create Dim_Branch, Dim_Dealer, Dim_Model, and Dim_Date tables  
 - Join and enrich data for analytics and reporting  
-
----
 
 ## Data Model – Star Schema
 
@@ -98,8 +86,6 @@ The final Gold layer is organized using a star schema design to optimize query p
 | Dim_Model | Dimension | Vehicle model details such as make, type, and category |
 | Dim_Date | Dimension | Calendar dimension supporting time-based analysis |
 
----
-
 ## Power BI Visualization
 
 The Gold layer is connected to Power BI, enabling interactive visualizations and data analysis.
@@ -111,10 +97,6 @@ Key insights available in Power BI include:
 - Regional and branch-level performance  
 - Dealer contribution and efficiency analysis  
 
-This reporting layer provides executives and analysts with actionable insights to improve sales strategies and monitor performance across regions.
-
----
-
 ## Key Learnings
 
 - Built a complete data engineering pipeline with Azure Data Factory  
@@ -123,8 +105,6 @@ This reporting layer provides executives and analysts with actionable insights t
 - Created a dimensional model to support business analytics  
 - Connected Power BI to Databricks for real-time insights  
 - Applied Azure best practices for scalability, governance, and performance  
-
----
 
 ## Technology Stack
 
@@ -139,22 +119,6 @@ This reporting layer provides executives and analysts with actionable insights t
 | Version Control | GitHub |
 | File Format | Delta, Parquet, CSV |
 
----
-
-## Project Outcome
-
-This project delivers a complete, automated, and scalable end-to-end data pipeline for vehicle sales data.  
-It enables clean, high-quality, and analytics-ready data for business reporting and performance monitoring.
-
-Key outcomes:
-- Scalable data architecture for growing data volumes  
-- Automated incremental ETL for continuous updates  
-- Unified data model for analytics and reporting  
-- Business-ready insights powered by Power BI  
-
-The final solution transforms raw vehicle sales data into actionable insights for data-driven decision-making.
-
----
 
 ## Contact
 
