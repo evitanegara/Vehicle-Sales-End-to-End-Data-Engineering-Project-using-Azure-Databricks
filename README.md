@@ -31,6 +31,10 @@ GitHub → Azure Data Factory → Azure SQL Database → Azure Data Lake Gen2 �
 
 The Azure Data Factory pipeline (adf-vehicle-ita) automates data ingestion and orchestrates each step of the process.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e47fc2aa-dbb6-4711-9771-c4f4f217464b" alt="ADF Pipeline Screenshot" width="800"/>
+</p>
+
 ### Pipeline Flow
 1. Lookup (last_load): retrieves the previous successful load date  
 2. Lookup (current_load): identifies the latest batch of data  
@@ -62,13 +66,16 @@ The Azure Data Lake (vehicleitadatalake) serves as the core data storage layer, 
 
 The Azure Databricks workspace (vehicledatabrick) handles all data transformations using Delta Lake for reliability and ACID compliance.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fcf06c07-a83b-44cc-8476-2bd75bcf6262" alt="Databricks Workflow Screenshot" width="800"/>
+</p>
 ### Transformation Flow
 
 Bronze → Silver:
 - Remove duplicates and null values  
 - Standardize column formats and naming conventions  
-- Validate data consistency and structure  
-
+- Validate data consistency and structure
+- 
 Silver → Gold:
 - Build Fact_Sales table with all sales transactions  
 - Create Dim_Branch, Dim_Dealer, Dim_Model, and Dim_Date tables  
@@ -121,14 +128,12 @@ Key insights available in Power BI include:
 
 
 ## Contact
-
 For questions or collaboration:
-
 Email: evitanegara@gmail.com  
 LinkedIn: https://www.linkedin.com/in/evitanegara/  
-GitHub: https://github.com/evitanegara  
+
 
 ---
 
-Transforming raw vehicle data into meaningful business insights powered by Azure.
+
 
