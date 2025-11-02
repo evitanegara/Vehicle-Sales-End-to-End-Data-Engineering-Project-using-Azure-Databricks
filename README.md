@@ -102,7 +102,7 @@ Key insights available in Power BI include:
 - Total vehicle sales by branch and dealer  
 - Monthly and yearly sales trends  
 - Top-performing vehicle models  
-- Regional and branch-level performance  
+- Branch level performance  
 - Dealer contribution and efficiency analysis  
 
 ## Key Learnings
