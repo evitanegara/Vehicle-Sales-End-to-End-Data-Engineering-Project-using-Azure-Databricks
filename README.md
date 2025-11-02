@@ -69,13 +69,14 @@ The Azure Databricks workspace (vehicledatabrick) handles all data transformatio
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fcf06c07-a83b-44cc-8476-2bd75bcf6262" alt="Databricks Workflow Screenshot" width="800"/>
 </p>
+
 ### Transformation Flow
 
 Bronze → Silver:
 - Remove duplicates and null values  
 - Standardize column formats and naming conventions  
 - Validate data consistency and structure
-- 
+  
 Silver → Gold:
 - Build Fact_Sales table with all sales transactions  
 - Create Dim_Branch, Dim_Dealer, Dim_Model, and Dim_Date tables  
